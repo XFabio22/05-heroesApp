@@ -28,4 +28,13 @@ export class HeroesService {
   agregarHeroe(heroe:Heroes):Observable<Heroes>{
     return this.http.post<Heroes>(`${this.url_Heroe}/heroes`,heroe)
   }
+
+  actualizarHeroe(heroe:Heroes):Observable<Heroes>{
+    return this.http.put<Heroes>(`${this.url_Heroe}/heroes/ ${heroe.id}`,heroe) 
+  }
+
+
+  borrarHeroe(heroe:Heroes):Observable<any>{
+    return this.http.delete<any>(`${this.url_Heroe}/heroes/${heroe.id}`)
+  }
 }

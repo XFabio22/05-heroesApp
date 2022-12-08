@@ -26,6 +26,10 @@ const rutas :Routes= [
         component:BuscarComponent
       },
       {
+        path:'editar/:id',
+        component:AgregarComponent
+      },
+      {
         path:':id',
         component:HeroeComponent
       },
