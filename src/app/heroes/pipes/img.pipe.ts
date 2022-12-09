@@ -5,7 +5,9 @@ import { Heroes } from "../Interfaces/heroes.interface";
 
 
 @Pipe({
-    name: 'imagen'
+    name: 'imagen',
+   // pure:  false    || el metodo transform se dispara cuando algo cambie no utilizar muy seguido ya 
+    //que se ejecuta continuamente y es malo para la app
 })
 
 export class ImgPipe implements PipeTransform{

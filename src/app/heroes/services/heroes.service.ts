@@ -30,7 +30,7 @@ export class HeroesService {
   }
 
   actualizarHeroe(heroe:Heroes):Observable<Heroes>{
-    return this.http.put<Heroes>(`${this.url_Heroe}/heroes/ ${heroe.id}`,heroe) 
+    return this.http.put<Heroes>(`${this.url_Heroe}/heroes/${heroe.id}`,heroe) 
   }
 
 
